@@ -15,17 +15,21 @@ public class MakeButton : MonoBehaviour
 
     private void AttachCallBack(string btn)
     {
-        if (btn.CompareTo("MeleeBtn") == 0)
+        if (btn.CompareTo("move1 Button") == 0)
         {
             hero.GetComponent<MakeAction>().SelectAttack("melee");
         }
-        else if (btn.CompareTo("MagicBtn") == 0)
+        else if (btn.CompareTo("move2 Button") == 0)
         {
-            hero.GetComponent<MakeAction>().SelectAttack("magic");
+            hero.GetComponent<MakeAction>().SelectAttack("fireball");
         }
-        else
+        else if (btn.CompareTo("move3 Button") == 0)
         {
-            hero.GetComponent<MakeAction>().SelectAttack("run");
+            hero.GetComponent<MakeAction>().SelectAttack("iceshard");
+        }
+        else if (btn.CompareTo("move4 Button") == 0)
+        {
+            hero.GetComponent<MakeAction>().SelectAttack("rockthrow");
         }
     }
 

@@ -60,7 +60,8 @@ public class GameController : MonoBehaviour
                 else
                 {
                     this.battleMenu.SetActive(false);
-                    string attackType = Random.Range(0, 2) == 1 ? "melee" : "magic";
+                    string[] attackTypes = { "melee", "fireball", "iceshard", "rockthrow" };
+                    string attackType = attackTypes[Random.Range(0, attackTypes.Length)];
                     currentUnit.GetComponent<MakeAction>().SelectAttack(attackType);
                 }
             }
